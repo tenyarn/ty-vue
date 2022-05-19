@@ -1,0 +1,22 @@
+{
+  "name": "ty-ui",
+  "private": false,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "dist": "vite build --target lib ./package/index.ts"
+  },
+  "dependencies": {
+    "pig-ui-test2": "^1.0.0",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.34",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
+  }
+}

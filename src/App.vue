@@ -39,6 +39,28 @@ const sayI = function(){
 let direction = ref('right')
 let pinPadding = ref(200)
 provide('a','ssss')
+const objs = [
+    { pro: "山东", ci: '临沂', town: '临沭' },
+    { pro: "北京", ci: '海淀', town: 'ee' },
+    { pro: "上海", ci: '浦东', town: 'xx' },
+    { pro: "广东", ci: '广州', town: 'ss' },
+    { pro: "山东", ci: '济南', town: '高新' },
+    { pro: "广东", ci: '厦门', town: 'zz' },
+    { pro: "北京", ci: '朝阳', town: 'yy' },
+    { pro: "山东", ci: '济南', town: '历下' },
+]
+const chobj = objs.sort((a,b):number=>{
+    if(a.pro!==b.pro){
+        return a.pro<b.pro ? -1 : 1
+    }else{
+        if(a.ci!==b.ci){
+            return a.ci<b.ci ? -1 : 1
+        }else{
+            return a.town<b.town ? -1 : 1
+        }
+    }
+})
+console.log(chobj)
 </script>
 
 <template>
@@ -47,10 +69,23 @@ provide('a','ssss')
   <UserTodo v-on:welcome="sayI"></UserTodo>
   <input v-model="am" v-pin:[direction]="pinPadding"> 
   <input type="range" min="0" max="500" v-model="pinPadding">
-  <ascomp></ascomp>
+  <ascomp>
+    <template #top>
+      <h3>this is top</h3>
+    </template>
+    <template #bottom>
+      <h3>this is bottom</h3>
+    </template>
+  </ascomp>
+  <div v-cloak>
+   nothing
+  </div>
 </template>
 
 <style>
+[v-cloak] {
+  display: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

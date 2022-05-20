@@ -6,6 +6,12 @@ const cb = function(){
     emits('welcome')
     theme.color='blue'
 }
+const todos  = reactive([
+    'a',
+    'b',
+    'c',
+    'd'
+])
 const nowthis = ()=> console.log(this)
 const theme = reactive({
     color:'red',
@@ -28,6 +34,8 @@ const a = inject('a')
     <div @click="nowthis">this:{{a}}</div>
     <div @click="changeMessage('zzzzz')">{{message}}</div>
 </div>
+<ul>
+</ul>
 </template>
 <style>
 .bu{

@@ -9,5 +9,9 @@ const time = 'is ok'
 <template>
 <div>
     {{time}}
+<hr>
+  <slot name="top"></slot>
+  <hr>
+  <slot name="bottom"></slot>
 </div>
 </template>

@@ -6,6 +6,8 @@ import  UserTodo  from '../src/components/userTodo.vue';
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import loading from './components/loading.vue';
 import rejcom from './components/rejcom.vue';
+import Typic from '../package/ty-pic/typic.vue';
+
 const ascomp = defineAsyncComponent({
 
   loader:()=>import ('./components/asycom.vue'),
@@ -80,6 +82,7 @@ console.log(chobj)
   <div v-cloak>
    nothing
   </div>
+  <Typic :url="['a']"></Typic>
 </template>
 
 <style>

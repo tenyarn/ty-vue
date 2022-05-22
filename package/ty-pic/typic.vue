@@ -1,9 +1,8 @@
 <script>
+import  picprop from './type'
 export default{
     name:'typic',
-    props:{
-        url:[]
-    },
+    props:picprop
     
 }
 </script>

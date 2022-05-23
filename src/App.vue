@@ -7,6 +7,7 @@ import  UserTodo  from '../src/components/userTodo.vue';
 import loading from './components/loading.vue';
 import rejcom from './components/rejcom.vue';
 import Typic from '../package/ty-pic/typic.vue';
+import TyTodo from '../package/ty-todo/tyTodo.vue';
 
 const ascomp = defineAsyncComponent({
 
@@ -41,28 +42,6 @@ const sayI = function(){
 let direction = ref('right')
 let pinPadding = ref(200)
 provide('a','ssss')
-const objs = [
-    { pro: "山东", ci: '临沂', town: '临沭' },
-    { pro: "北京", ci: '海淀', town: 'ee' },
-    { pro: "上海", ci: '浦东', town: 'xx' },
-    { pro: "广东", ci: '广州', town: 'ss' },
-    { pro: "山东", ci: '济南', town: '高新' },
-    { pro: "广东", ci: '厦门', town: 'zz' },
-    { pro: "北京", ci: '朝阳', town: 'yy' },
-    { pro: "山东", ci: '济南', town: '历下' },
-]
-const chobj = objs.sort((a,b):number=>{
-    if(a.pro!==b.pro){
-        return a.pro<b.pro ? -1 : 1
-    }else{
-        if(a.ci!==b.ci){
-            return a.ci<b.ci ? -1 : 1
-        }else{
-            return a.town<b.town ? -1 : 1
-        }
-    }
-})
-console.log(chobj)
 </script>
 
 <template>
@@ -83,6 +62,7 @@ console.log(chobj)
    nothing
   </div>
   <Typic :url="['a']"></Typic>
+  <TyTodo :todos="['a','b']"></TyTodo>
 </template>
 
 <style>

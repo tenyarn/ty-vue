@@ -1,7 +1,7 @@
 <script>
-import  picprop from './type'
-export default{
-    name:'typic',
+import {picprop} from './type'
+export default {
+
     props:picprop
     
 }

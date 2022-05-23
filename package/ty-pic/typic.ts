@@ -1,5 +1,5 @@
-import { piccomponent } from "./type"
-export const typic:piccomponent = {
+//import { piccomponent } from "./type"
+/*export const typic:piccomponent = {
     name:'typic',
     props:{
         url:[]
@@ -8,4 +8,4 @@ export const typic:piccomponent = {
     <div v-for="(item,index) in url" :key="index">
       <img :src=item>
     </div>`,
-}
+}*/

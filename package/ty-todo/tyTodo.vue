@@ -51,7 +51,7 @@ export default{
 <div style="overflow-y: auto;width: 60%;height: 200px;display:inline-flex;flex-direction: column;">
     <div v-for="(item,index) in todos" :key="index" style="display:inline-flex ;margin-bottom: 10px;">
        <input type="checkbox" @change="check(index)">
-        <label style="margin-left: 20px;" :class="{ completed:checkarr[index]}">{{item}}</label>
+        <label style="width: 100%;" :class="{ completed:checkarr[index]}">{{item}}</label>
         <div style="width:100% ;"></div>
         <button @click="deletetodo(index)" :itemflag="index">x</button>
     </div>

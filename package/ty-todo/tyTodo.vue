@@ -45,7 +45,7 @@ export default{
 <template>
 <div style="width: 80%;height:250px;display:inline-flex;flex-direction: column;align-items: center;background-color: aliceblue;">
 <div style="display: inline-flex;height: 50px;inline-size: 50px;width: 60%;align-items: center;justify-content: center;">
-    <div style="color:skyblue;padding: 10px 0;">how to do </div>
+    <div style="color:skyblue;padding: 10px 0;">how to do ?</div>
     <input type="text" v-model="todo" @keyup.enter="addtodo">
 </div>
 <div style="overflow-y: auto;width: 60%;height: 200px;display:inline-flex;flex-direction: column;">

@@ -8,7 +8,8 @@ import loading from './components/loading.vue';
 import rejcom from './components/rejcom.vue';
 import Typic from '../package/ty-pic/typic.vue';
 import TyTodo from '../package/ty-todo/tyTodo.vue';
-
+import tyPuzzle from '../package/ty-2048/typuzzle.vue'
+import vividText from '../package/ty-vividtext/vividText.vue'
 const imgs = [
   '/02.jpg',
   '/03.jpg',
@@ -79,6 +80,8 @@ provide('a', 'ssss')
   </div>
   <Typic :url="imgs"></Typic>
   <TyTodo :todos="['a', 'b']"></TyTodo>
+  <tyPuzzle></tyPuzzle>
+  <vividText></vividText>
 </template>
 
 <style>

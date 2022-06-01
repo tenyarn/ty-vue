@@ -30,7 +30,7 @@ export default {
         }
 
         const movet = function(arr){
-            console.log(arr)
+            console.log(arr.value)
             let n = []
             let r = []
             arr.forEach((item)=>{
@@ -38,6 +38,7 @@ export default {
                     n.push(item)
                 }
             })
+            console.log(n)
             let o = 0
             n.forEach((item)=>{
                 if(item==o){
@@ -51,24 +52,25 @@ export default {
                         o=item
                     }
                     
-
                 }
             })
             let rl = []
+            console.log(r)
             for(let i=0;i<4-r.length;i++){
                 rl.push(0)
             }
             console.log(rl)
-            r.concat(...rl)
+            r.push(...rl)
             console.log(r)
-            debugger
             return r
         }
         const movep = function(x){
             switch(x){
                 case 0 : {
                     for(let i=0;i<4;i++){
-                        zoom[i]=movet(zoom[i])
+                        let t = movet(zoom[i])
+                        zoom[i].slice(0,4)
+                        zoom[i].concat(...t)
                     }
                     break
                 }
